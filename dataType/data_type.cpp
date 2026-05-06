@@ -73,6 +73,8 @@ int main(int argc, char *argv[]) {
     cout << "string: \t" << "所占字节数：" << sizeof(string) << endl;
     // << "\t最大值：" << (numeric_limits<string>::max)() << "\t最小值：" << (numeric_limits<string>::min)() << endl;
     cout << "type: \t\t" << "************size**************"<< endl;
+    string s = "Hello";
     return 0;
+
 }
 
