@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD 11)
 add_executable(cpp_basic main.cpp
         note.cpp
         dataType/data_type.cpp
-        dataType/ptr.cpp)
+        dataType/ptr.cpp
+        dataType/cast.cpp
+        variable.cpp)
