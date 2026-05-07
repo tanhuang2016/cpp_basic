@@ -20,7 +20,10 @@ add_executable(cpp_basic main.cpp
         array.cpp
         string.cpp
         ptr.cpp
-        time.cpp)
+        time.cpp
+        out&in/cin.cpp
+        out&in/cerr.cpp
+        out&in/clog.cpp)
 
 
 add_executable(extern_demo
