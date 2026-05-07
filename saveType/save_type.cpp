@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 
 // 全局变量，具有外部链接，默认存储类为extern
 int globalVar;
@@ -55,11 +56,14 @@ void test(int depth) {
 }
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
+
     extern int externalVar; // 声明具有外部链接的变量
 
     function();
     testLifetime();
     testLifetime();
     test(5);
+    printf("This loop will run forever.\n");
     return 0;
 }
