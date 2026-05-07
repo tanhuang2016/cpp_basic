@@ -17,7 +17,8 @@ add_executable(cpp_basic main.cpp
         saveType/thread_local.cpp
         function/call.cpp
         function/lambda.cpp
-        array.cpp)
+        array.cpp
+        string.cpp)
 
 
 add_executable(extern_demo
