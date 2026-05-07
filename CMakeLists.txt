@@ -8,4 +8,5 @@ add_executable(cpp_basic main.cpp
         dataType/data_type.cpp
         dataType/ptr.cpp
         dataType/cast.cpp
-        variable.cpp)
+        variable.cpp
+        variable_scope.cpp)
