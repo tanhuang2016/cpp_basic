@@ -15,7 +15,8 @@ add_executable(cpp_basic main.cpp
         saveType/extern_support.cpp
         saveType/mutable.cpp
         saveType/thread_local.cpp
-        function/call.cpp)
+        function/call.cpp
+        function/lambda.cpp)
 
 
 add_executable(extern_demo
