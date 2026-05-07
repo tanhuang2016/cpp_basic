@@ -12,7 +12,9 @@ add_executable(cpp_basic main.cpp
         variable_scope.cpp
         saveType/save_type.cpp
         saveType/extern_main.cpp
-        saveType/extern_support.cpp)
+        saveType/extern_support.cpp
+        saveType/mutable.cpp
+        saveType/thread_local.cpp)
 
 
 add_executable(extern_demo
