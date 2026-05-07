@@ -18,7 +18,8 @@ add_executable(cpp_basic main.cpp
         function/call.cpp
         function/lambda.cpp
         array.cpp
-        string.cpp)
+        string.cpp
+        ptr.cpp)
 
 
 add_executable(extern_demo
