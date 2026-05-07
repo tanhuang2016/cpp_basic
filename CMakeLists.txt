@@ -10,4 +10,13 @@ add_executable(cpp_basic main.cpp
         dataType/cast.cpp
         variable.cpp
         variable_scope.cpp
-        saveType/save_type.cpp)
+        saveType/save_type.cpp
+        saveType/extern_main.cpp
+        saveType/extern_support.cpp)
+
+
+add_executable(extern_demo
+        saveType/extern_main.cpp
+        saveType/extern_support.cpp)
+
+
