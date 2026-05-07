@@ -17,13 +17,18 @@ add_executable(cpp_basic main.cpp
         saveType/thread_local.cpp
         function/call.cpp
         function/lambda.cpp
-        array.cpp
+        vector/array.cpp
         string.cpp
         ptr.cpp
         time.cpp
         out&in/cin.cpp
         out&in/cerr.cpp
-        out&in/clog.cpp)
+        out&in/clog.cpp
+        struct/struct1.cpp
+        vector.cpp
+        vector/CopyOnWriteVector.h
+        vector/CopyOnWriteVectorTest.cpp
+)
 
 
 add_executable(extern_demo
