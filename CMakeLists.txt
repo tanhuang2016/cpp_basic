@@ -19,7 +19,8 @@ add_executable(cpp_basic main.cpp
         function/lambda.cpp
         array.cpp
         string.cpp
-        ptr.cpp)
+        ptr.cpp
+        time.cpp)
 
 
 add_executable(extern_demo
