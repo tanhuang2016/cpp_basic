@@ -22,3 +22,14 @@ add_executable(extern_demo
         saveType/extern_support.cpp)
 
 
+#点击构件，而不是执行
+add_custom_target(clean_exe
+        COMMAND ${CMAKE_COMMAND} -E echo "Cleaning all .exe files..."
+        COMMAND powershell -Command "Get-ChildItem -Path ${CMAKE_SOURCE_DIR} -Filter *.exe -Recurse | Remove-Item -Force"
+        COMMAND ${CMAKE_COMMAND} -E echo "Cleaned!"
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        COMMENT "Removing all .exe files in project"
+        VERBATIM
+)
+
+
