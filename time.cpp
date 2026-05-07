@@ -24,4 +24,10 @@ int main( )
     cout << "时间: "<< ltm->tm_hour << ":";
     cout << ltm->tm_min << ":";
     cout << ltm->tm_sec << endl;
+
+
+    // 格式化输出：yyyy-mm-dd HH:mm:ss
+    char time_buffer[80];
+    strftime(time_buffer, sizeof(time_buffer), "%Y-%m-%d %H:%M:%S", ltm);
+    cout << "\n格式化时间: " << time_buffer << endl;
 }
