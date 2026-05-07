@@ -31,7 +31,6 @@ int main(int argc, char *argv[]) {
 
     // 将基类指针转换为派生类指针
     Driver* ptr_derived = dynamic_cast<Driver*>(ptr_base);
-
     if (ptr_derived) {
         ptr_derived->show(); // 成功转换，调用派生类方法
     } else {

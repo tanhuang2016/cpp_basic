@@ -9,4 +9,5 @@ add_executable(cpp_basic main.cpp
         dataType/ptr.cpp
         dataType/cast.cpp
         variable.cpp
-        variable_scope.cpp)
+        variable_scope.cpp
+        saveType/save_type.cpp)
