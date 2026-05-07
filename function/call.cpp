@@ -6,7 +6,15 @@
 using namespace std;
 
 // 函数声明
-int max(int , int );
+int max(int , int num2=20 );
+
+
+int max(int num1)
+{
+
+
+    return num1;
+}
 
 
 // ============================================
@@ -58,7 +66,7 @@ int main ()
     int ret;
 
     // 调用函数来获取最大值
-    ret = max(a, b);
+    ret = max(a,b);
 
     cout << "Max value is : " << ret << endl;
 
