@@ -31,6 +31,8 @@ add_executable(cpp_basic main.cpp
         class/Line.cpp
         class/friend.cpp
         class/this.cpp
+        class/ptr.cpp
+        overload/function_call.cpp
 )
 
 
