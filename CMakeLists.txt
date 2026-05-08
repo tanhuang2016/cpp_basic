@@ -30,6 +30,7 @@ add_executable(cpp_basic main.cpp
         vector/CopyOnWriteVectorTest.cpp
         class/Line.cpp
         class/friend.cpp
+        class/this.cpp
 )
 
 
