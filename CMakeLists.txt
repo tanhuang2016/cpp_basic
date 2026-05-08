@@ -28,6 +28,8 @@ add_executable(cpp_basic main.cpp
         vector.cpp
         vector/CopyOnWriteVector.h
         vector/CopyOnWriteVectorTest.cpp
+        class/Line.cpp
+        class/friend.cpp
 )
 
 
