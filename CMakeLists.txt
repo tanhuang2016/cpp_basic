@@ -33,6 +33,7 @@ add_executable(cpp_basic main.cpp
         class/this.cpp
         class/ptr.cpp
         overload/function_call.cpp
+        extend/virtual.cpp
 )
 
 
