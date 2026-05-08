@@ -1,0 +1,58 @@
+//
+// Created by Administrator on 2026/5/8.
+//
+#include <iostream>
+/*@echo off
+
+:: 设置代理
+set HTTP_PROXY=http://127.0.0.1:7897
+set HTTPS_PROXY=http://127.0.0.1:7897
+
+:: 手动指定编译器路径
+set CC=D:\soft\CLion 2026.1.1\bin\mingw\bin\gcc.exe
+set CXX=D:\soft\CLion 2026.1.1\bin\mingw\bin\g++.exe
+
+:: 进入 vcpkg 目录
+cd /d D:\soft\vcpkg-2026.04.27\vcpkg-2026.04.27
+
+:: 安装 boost
+vcpkg.exe install boost-system:x64-mingw-dynamic boost-filesystem:x64-mingw-dynamic boost-stacktrace:x64-mingw-dynamic
+
+pause*/
+
+#include <boost/filesystem.hpp>
+using namespace std;
+
+double division(int a, int b)
+{
+    if( b == 0 )
+    {
+        throw "Division by zero condition!";
+    }
+    return (a/b);
+}
+
+int main ()
+{
+    int x = 50;
+    int y = 0;
+    double z = 0;
+    // 测试 boost::filesystem
+    boost::filesystem::path current_path = boost::filesystem::current_path();
+    cout << "Current path: " << current_path.string() << endl;
+    try {
+        z = division(x, y);
+        cout << z << endl;
+    }catch (const char* msg) {
+        cerr << msg << endl;
+    }
+    try {
+        z = division(x, y);
+        cout << z << endl;
+    }catch (const std::exception& e) {
+        // std::cerr << "Error: " << e.what() << "\nStack:\n"
+        //           << boost::stacktrace::stacktrace();
+    }
+
+    return 0;
+}
