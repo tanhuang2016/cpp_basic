@@ -7,6 +7,7 @@ using namespace std;
 class Shape {
 public:
     // virtual int area() = 0;  // 纯虚函数，强制子类实现此方法
+    // virtual int area2();
     virtual int area() {
         return -1;
     }
