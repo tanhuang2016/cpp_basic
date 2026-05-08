@@ -2,6 +2,7 @@
 // Created by Administrator on 2026/5/8.
 //
 #include <iostream>
+#include <stdexcept>
 /*@echo off
 
 :: 设置代理
@@ -19,15 +20,16 @@ cd /d D:\soft\vcpkg-2026.04.27\vcpkg-2026.04.27
 vcpkg.exe install boost-system:x64-mingw-dynamic boost-filesystem:x64-mingw-dynamic boost-stacktrace:x64-mingw-dynamic
 
 pause*/
-
+#define BOOST_STACKTRACE_USE_NOOP
 #include <boost/filesystem.hpp>
+#include <boost/stacktrace.hpp>
 using namespace std;
 
 double division(int a, int b)
 {
     if( b == 0 )
     {
-        throw "Division by zero condition!";
+        throw runtime_error("Division by zero condition!");
     }
     return (a/b);
 }
@@ -40,18 +42,26 @@ int main ()
     // 测试 boost::filesystem
     boost::filesystem::path current_path = boost::filesystem::current_path();
     cout << "Current path: " << current_path.string() << endl;
+    // try {
+    //     z = division(x, y);
+    //     cout << z << endl;
+    // }catch (const char* msg) {
+    //     cerr << msg << endl;
+    // }
+    // try {
+    //     z = division(x, y);
+    //     cout << z << endl;
+    // }catch (const std::exception& e) {
+    //     std::cerr << "Error: " << e.what() << "\nStack:\n"
+    //               << boost::stacktrace::stacktrace();
+    // }
+
     try {
         z = division(x, y);
         cout << z << endl;
-    }catch (const char* msg) {
-        cerr << msg << endl;
-    }
-    try {
-        z = division(x, y);
-        cout << z << endl;
-    }catch (const std::exception& e) {
-        // std::cerr << "Error: " << e.what() << "\nStack:\n"
-        //           << boost::stacktrace::stacktrace();
+    } catch (const std::exception& e) {
+        cerr << "Caught exception: " << e.what() << endl;
+        cerr << "Stack trace:\n" << boost::stacktrace::stacktrace() << endl;
     }
 
     return 0;
