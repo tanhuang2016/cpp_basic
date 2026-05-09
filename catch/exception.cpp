@@ -20,7 +20,7 @@ cd /d D:\soft\vcpkg-2026.04.27\vcpkg-2026.04.27
 vcpkg.exe install boost-system:x64-mingw-dynamic boost-filesystem:x64-mingw-dynamic boost-stacktrace:x64-mingw-dynamic
 
 pause*/
-#define BOOST_STACKTRACE_USE_NOOP
+// #define BOOST_STACKTRACE_USE_NOOP
 #include <boost/filesystem.hpp>
 #include <boost/stacktrace.hpp>
 using namespace std;
