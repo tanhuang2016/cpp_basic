@@ -55,7 +55,16 @@ int main ()
     //     std::cerr << "Error: " << e.what() << "\nStack:\n"
     //               << boost::stacktrace::stacktrace();
     // }
-
+    int a =1;
+    int *b= &a;
+    cout <<"b"<< *b << endl;
+    cout <<"b1"<< b[0] << endl;
+    int *invalue= NULL;
+    invalue = new int[2]{2,3};
+    cout <<"invalue"<< *invalue << endl;
+    cout <<"invalue2"<< invalue[1] << endl;
+    char* pvalue  = NULL;
+    pvalue  = new char[20];
     try {
         z = division(x, y);
         cout << z << endl;
