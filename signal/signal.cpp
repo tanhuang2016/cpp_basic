@@ -20,11 +20,15 @@ void signalHandler( int signum )
 
 int main ()
 {
+    int i = 0;
     // 注册信号 SIGINT 和信号处理程序
     signal(SIGINT, signalHandler);
 
-    while(1){
+    while(++i){
         cout << "Going to sleep...." << endl;
+        if( i == 3 ){
+            raise( SIGINT);
+        }
         sleep(1);
     }
 
