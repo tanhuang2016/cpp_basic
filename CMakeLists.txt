@@ -46,6 +46,8 @@ add_executable(cpp_basic main.cpp
         extend/virtual.cpp
         fstream/fstream.cpp
         catch/exception.cpp
+        template/template.cpp
+        macro/paramr.cpp
 )
 
 # 查找 boost 包（vcpkg 独立包方式）

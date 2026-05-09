@@ -24,6 +24,7 @@ pause*/
 #include <boost/filesystem.hpp>
 #include <boost/stacktrace.hpp>
 using namespace std;
+using namespace boost;
 
 double division(int a, int b)
 {
