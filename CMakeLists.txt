@@ -53,6 +53,7 @@ add_executable(cpp_basic main.cpp
         thread/create_thread.cpp
         thread/condition_variable.cpp
         thread/atomic.cpp
+        sqlite/sqlite_demo.cpp
 )
 
 # 查找 boost 包（vcpkg 独立包方式）
@@ -83,6 +84,13 @@ target_include_directories(exception PRIVATE ${Boost_INCLUDE_DIR})
 target_link_libraries(exception PRIVATE Boost::system Boost::filesystem Boost::stacktrace_windbg)
 
 
+add_executable(sqlite_demo
+        sqlite_demo/sqlite_demo.cpp
+)
+
+find_package(SQLite3 REQUIRED CONFIG)
+add_executable(sqlite_demo sqlite_demo.cpp)
+target_link_libraries(sqlite_demo PRIVATE SQLite::SQLite3)
 
 #点击构件，而不是执行
 add_custom_target(clean_exe
